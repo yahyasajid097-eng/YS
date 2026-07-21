@@ -112,7 +112,7 @@
       "newArrival": false,
       "rating": 4.9,
       "reviewCount": 128,
-      "images": [Salamona.jpg]
+      "images": ["assets/products/Salamona.jpg"]
     },
     {
       "id": "mb-002",
