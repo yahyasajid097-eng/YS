@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Bag — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header" style="padding:90px 20px 50px;">
+    <span class="eyebrow" data-i18n="nav.cart">Cart</span>
+    <h1 data-i18n="cart.title">Your Shopping Bag</h1>
+  </div>
+
+  <section class="section" style="padding-top:50px;">
+    <div class="container">
+      <div class="cart-layout" id="cartLayout">
+        <div>
+          <div id="cartItemsList"></div>
+          <a href="shop.html" class="btn btn-outline mt-lg" data-i18n="cart.continueShopping">Continue Shopping</a>
+        </div>
+        <div class="summary-card">
+          <h3 data-i18n="checkout.orderSummary">Order Summary</h3>
+          <div class="summary-row"><span data-i18n="cart.subtotal">Subtotal</span><span id="sumSubtotal">—</span></div>
+          <div class="summary-row"><span data-i18n="cart.shipping">Shipping</span><span id="sumShipping">—</span></div>
+          <div class="summary-row total"><span data-i18n="cart.total">Total</span><span id="sumTotal">—</span></div>
+          <a href="checkout.html" class="btn btn-gold btn-block mt-lg" data-i18n="cart.checkout" style="margin-top:24px;">Proceed to Checkout</a>
+        </div>
+      </div>
+
+      <div class="empty-state" id="cartEmpty" style="display:none;">
+        <div id="emptyCartIcon"></div>
+        <h3 data-i18n="cart.empty" style="font-family:var(--font-display); font-size:24px; margin-bottom:10px;">Your bag is empty.</h3>
+        <p data-i18n="cart.emptySub">Discover our collection and find your new favorite.</p>
+        <a href="shop.html" class="btn btn-primary" data-i18n="cart.continueShopping">Continue Shopping</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+MB.init('cart').then(() => {
+  document.getElementById('emptyCartIcon').innerHTML = MB.svgIcon('bag');
+  MBCart.renderCartPage();
+  document.addEventListener('mb:rerender', () => MBCart.renderCartPage());
+  document.addEventListener('mb:cartchange', () => MBCart.renderCartPage());
+});
+</script>
+</body>
+</html>

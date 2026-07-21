@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipping Policy — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shipping">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header">
+    <span class="eyebrow" data-i18n="footer.shipping">Shipping Policy</span>
+    <h1 data-i18n="footer.shipping">Shipping Policy</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="footer.shipping">Shipping</span></div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="policy-content" id="policyContent"></div>
+
+      <div class="about-values mt-lg">
+        <div class="value-card">
+          <div class="feature-icon" id="sIcon1"></div>
+          <h3 id="sT1"></h3>
+          <p id="sP1"></p>
+        </div>
+        <div class="value-card">
+          <div class="feature-icon" id="sIcon2"></div>
+          <h3 id="sT2"></h3>
+          <p id="sP2"></p>
+        </div>
+        <div class="value-card">
+          <div class="feature-icon" id="sIcon3"></div>
+          <h3 id="sT3"></h3>
+          <p id="sP3"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script>
+const CONTENT = {
+  en: { updated: 'Last updated: July 2026',
+    cards: [['Nationwide Delivery','We deliver to every major city and most towns across Morocco through trusted local courier partners.'],
+            ['2–5 Business Days','Casablanca, Rabat and nearby cities typically receive orders within 2–3 days; other regions within 3–5 days.'],
+            ['Free Above 899 DH','Orders of 899 DH or more ship free. Orders below this threshold include a flat 35 DH delivery fee.']],
+    sections: [
+    ['Processing Time', 'Orders are prepared and handed to our courier partner within 24–48 hours of confirmation, Monday through Saturday.'],
+    ['Delivery Attempts', 'Our courier will attempt delivery to the address provided at checkout. If you\'re unavailable, they will contact you by phone to arrange a convenient re-delivery time.'],
+    ['Order Tracking', 'Once your order ships, you will receive a WhatsApp message with your courier\'s contact details so you can track your delivery in real time.'],
+    ['Remote Areas', 'For villages or remote areas outside standard courier coverage, delivery may take a few extra days; our team will inform you if this applies to your address.']
+  ]},
+  fr: { updated: 'Dernière mise à jour : juillet 2026',
+    cards: [['Livraison Nationale','Nous livrons dans toutes les grandes villes et la plupart des villes du Maroc via des partenaires de messagerie locaux de confiance.'],
+            ['2 à 5 Jours Ouvrables','Casablanca, Rabat et les villes voisines reçoivent généralement leurs commandes sous 2 à 3 jours ; les autres régions sous 3 à 5 jours.'],
+            ['Gratuite Dès 899 DH','Les commandes de 899 DH ou plus sont livrées gratuitement. En dessous, des frais fixes de 35 DH s\'appliquent.']],
+    sections: [
+    ['Délai de Préparation', 'Les commandes sont préparées et remises à notre partenaire de livraison sous 24 à 48 heures après confirmation, du lundi au samedi.'],
+    ['Tentatives de Livraison', 'Notre livreur tentera de livrer à l\'adresse fournie lors de la commande. En cas d\'absence, il vous contactera par téléphone pour convenir d\'un nouveau créneau.'],
+    ['Suivi de Commande', 'Une fois votre commande expédiée, vous recevrez un message WhatsApp avec les coordonnées du livreur pour suivre votre livraison en temps réel.'],
+    ['Zones Éloignées', 'Pour les villages ou zones éloignées hors couverture standard, la livraison peut prendre quelques jours supplémentaires ; notre équipe vous en informera si cela concerne votre adresse.']
+  ]},
+  ar: { updated: 'آخر تحديث: يوليو 2026',
+    cards: [['توصيل لجميع أنحاء المغرب','نوصل إلى جميع المدن الرئيسية ومعظم البلدات في المغرب عبر شركاء توصيل محليين موثوقين.'],
+            ['من 2 إلى 5 أيام عمل','عادة ما تصل الطلبات إلى الدار البيضاء والرباط والمدن القريبة خلال 2-3 أيام؛ والمناطق الأخرى خلال 3-5 أيام.'],
+            ['توصيل مجاني فوق 899 درهم','الطلبات بقيمة 899 درهم أو أكثر تُشحن مجاناً. الطلبات الأقل تشمل رسوم توصيل ثابتة قدرها 35 درهم.']],
+    sections: [
+    ['وقت التجهيز', 'يتم تجهيز الطلبات وتسليمها لشريك التوصيل خلال 24 إلى 48 ساعة من التأكيد، من الاثنين إلى السبت.'],
+    ['محاولات التوصيل', 'سيحاول المندوب التوصيل إلى العنوان المُقدَّم عند الطلب. في حال عدم توفرك، سيتواصل معك هاتفياً لتحديد موعد توصيل مناسب آخر.'],
+    ['تتبع الطلب', 'بمجرد شحن طلبك، ستصلك رسالة واتساب تحتوي على بيانات التواصل مع المندوب لتتبعي طلبك لحظة بلحظة.'],
+    ['المناطق النائية', 'بالنسبة للقرى أو المناطق النائية خارج التغطية المعتادة، قد يستغرق التوصيل أياماً إضافية قليلة؛ سيُعلمك فريقنا في حال انطبق ذلك على عنوانك.']
+  ]}
+};
+
+MB.init('shipping').then(() => {
+  function render(){
+    const c = CONTENT[MB.state.lang] || CONTENT.en;
+    document.getElementById('policyContent').innerHTML =
+      `<span class="updated-date">${c.updated}</span>` +
+      c.sections.map(([h,p]) => `<h2>${h}</h2><p>${p}</p>`).join('');
+
+    const icons = ['truck','pin','leaf'];
+    c.cards.forEach((card, i) => {
+      document.getElementById(`sIcon${i+1}`).innerHTML = MB.svgIcon(icons[i]);
+      document.getElementById(`sT${i+1}`).textContent = card[0];
+      document.getElementById(`sP${i+1}`).textContent = card[1];
+    });
+  }
+  render();
+  document.addEventListener('mb:rerender', render);
+});
+</script>
+</body>
+</html>

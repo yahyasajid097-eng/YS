@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header">
+    <svg class="crescent-bg" viewBox="0 0 100 100"><path fill="#D4AF37" d="M62 8C42 15 28 35 28 55C28 75 42 90 62 96C36 98 14 78 14 52C14 26 36 6 62 8Z"/></svg>
+    <span class="eyebrow" data-i18n="nav.contact">Contact</span>
+    <h1 data-i18n="nav.contact">Contact Us</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.contact">Contact</span></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div>
+          <div class="contact-info-card reveal">
+            <div id="cPin"></div>
+            <div><h4 data-i18n="nav.contact">Address</h4><p id="cAddress"></p></div>
+          </div>
+          <div class="contact-info-card reveal">
+            <div id="cPhone"></div>
+            <div><h4 data-i18n="checkout.phone">Phone</h4><a id="cPhoneVal" href="#"></a></div>
+          </div>
+          <div class="contact-info-card reveal">
+            <div id="cMail"></div>
+            <div><h4>Email</h4><a id="cEmailVal" href="#"></a></div>
+          </div>
+          <div class="contact-info-card reveal">
+            <div id="cClock"></div>
+            <div><h4 data-i18n="misc.loading">Hours</h4><p>Mon–Sat, 9:00 – 19:00</p></div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="reveal">
+          <div class="form-field">
+            <label data-i18n="checkout.fullName">Full Name</label>
+            <input type="text" required id="ctName">
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" required id="ctEmail">
+          </div>
+          <div class="form-field">
+            <label data-i18n="checkout.notes">Message</label>
+            <textarea required id="ctMessage" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="checkout.placeOrder">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+MB.init('contact').then(() => {
+  document.getElementById('cPin').innerHTML = MB.svgIcon('pin');
+  document.getElementById('cPhone').innerHTML = MB.svgIcon('phone');
+  document.getElementById('cMail').innerHTML = MB.svgIcon('mail');
+  document.getElementById('cClock').innerHTML = MB.svgIcon('clock');
+  document.getElementById('cAddress').textContent = MB.fieldT(MB.state.store.contact.address);
+  document.getElementById('cPhoneVal').textContent = MB.state.store.contact.phoneDisplay;
+  document.getElementById('cPhoneVal').href = 'tel:+' + MB.state.store.whatsappNumber;
+  document.getElementById('cEmailVal').textContent = MB.state.store.contact.email;
+  document.getElementById('cEmailVal').href = 'mailto:' + MB.state.store.contact.email;
+
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('ctName').value;
+    const email = document.getElementById('ctEmail').value;
+    const msg = document.getElementById('ctMessage').value;
+    const subject = encodeURIComponent('Message from ' + name + ' — Moon Blossom website');
+    const body = encodeURIComponent(msg + '\n\nReply to: ' + email);
+    window.location.href = `mailto:${MB.state.store.contact.email}?subject=${subject}&body=${body}`;
+    MB.toast('✓ Opening your email app...');
+  });
+});
+</script>
+</body>
+</html>

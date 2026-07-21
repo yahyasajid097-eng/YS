@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="privacy">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header">
+    <span class="eyebrow" data-i18n="footer.privacy">Privacy Policy</span>
+    <h1 data-i18n="footer.privacy">Privacy Policy</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="footer.privacy">Privacy Policy</span></div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="policy-content" id="policyContent"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script>
+const CONTENT = {
+  en: { updated: 'Last updated: July 2026', sections: [
+    ['Information We Collect', 'When you place an order or contact us, we collect the information you provide directly: your name, phone number, delivery address, and city. We do not require an account or store payment details, since all orders are paid in cash on delivery.'],
+    ['How We Use Your Information', 'We use your information solely to process and deliver your order, communicate with you about its status via WhatsApp or phone, and improve our products and services. We never sell or rent your personal data to third parties.'],
+    ['Cookies & Browsing Data', 'Our website may use basic browser storage to remember your cart and language preference. This data stays on your device and is not transmitted to us.'],
+    ['Data Sharing', 'We share your delivery details only with our shipping partners, solely for the purpose of fulfilling your order.'],
+    ['Your Rights', 'You may request access to, correction of, or deletion of your personal information at any time by contacting us through the details on our Contact page.'],
+    ['Changes to This Policy', 'We may update this policy from time to time. Any changes will be posted on this page with a revised date.']
+  ]},
+  fr: { updated: 'Dernière mise à jour : juillet 2026', sections: [
+    ['Informations Que Nous Collectons', 'Lorsque vous passez une commande ou nous contactez, nous collectons les informations que vous fournissez directement : votre nom, numéro de téléphone, adresse de livraison et ville. Aucun compte n\'est requis et aucune donnée de paiement n\'est stockée, puisque toutes les commandes sont payées en espèces à la livraison.'],
+    ['Utilisation de Vos Informations', 'Nous utilisons vos informations uniquement pour traiter et livrer votre commande, communiquer avec vous sur son statut via WhatsApp ou téléphone, et améliorer nos produits et services. Nous ne vendons ni ne louons jamais vos données personnelles.'],
+    ['Cookies et Données de Navigation', 'Notre site peut utiliser le stockage local du navigateur pour mémoriser votre panier et votre langue préférée. Ces données restent sur votre appareil.'],
+    ['Partage des Données', 'Nous partageons vos coordonnées de livraison uniquement avec nos partenaires de livraison, dans le seul but d\'exécuter votre commande.'],
+    ['Vos Droits', 'Vous pouvez demander l\'accès, la correction ou la suppression de vos informations personnelles à tout moment en nous contactant via notre page Contact.'],
+    ['Modifications de Cette Politique', 'Nous pouvons mettre à jour cette politique de temps à autre. Toute modification sera publiée sur cette page avec une date révisée.']
+  ]},
+  ar: { updated: 'آخر تحديث: يوليو 2026', sections: [
+    ['المعلومات التي نجمعها', 'عند تقديم طلب أو التواصل معنا، نقوم بجمع المعلومات التي تقدمينها مباشرة: اسمك، رقم هاتفك، عنوان التوصيل، والمدينة. لا نطلب إنشاء حساب ولا نخزن بيانات الدفع، لأن جميع الطلبات تُدفع نقداً عند الاستلام.'],
+    ['كيف نستخدم معلوماتك', 'نستخدم معلوماتك فقط لمعالجة وتوصيل طلبك، والتواصل معك بخصوص حالته عبر واتساب أو الهاتف، وتحسين منتجاتنا وخدماتنا. لا نبيع أو نؤجر بياناتك الشخصية لأي طرف ثالث أبداً.'],
+    ['ملفات تعريف الارتباط وبيانات التصفح', 'قد يستخدم موقعنا التخزين الأساسي للمتصفح لتذكر سلتك ولغتك المفضلة. تبقى هذه البيانات على جهازك ولا تُرسل إلينا.'],
+    ['مشاركة البيانات', 'نشارك تفاصيل التوصيل الخاصة بك فقط مع شركاء الشحن، لغرض تنفيذ طلبك حصراً.'],
+    ['حقوقك', 'يمكنك طلب الوصول إلى معلوماتك الشخصية أو تصحيحها أو حذفها في أي وقت عبر التواصل معنا من خلال صفحة اتصل بنا.'],
+    ['التغييرات على هذه السياسة', 'قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ محدث.']
+  ]}
+};
+
+MB.init('privacy').then(() => {
+  function render(){
+    const c = CONTENT[MB.state.lang] || CONTENT.en;
+    document.getElementById('policyContent').innerHTML =
+      `<span class="updated-date">${c.updated}</span>` +
+      c.sections.map(([h,p]) => `<h2>${h}</h2><p>${p}</p>`).join('');
+  }
+  render();
+  document.addEventListener('mb:rerender', render);
+});
+</script>
+</body>
+</html>

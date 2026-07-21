@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Product — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <section class="section" style="padding-top:48px;">
+    <div class="container">
+      <div class="breadcrumb" style="color:var(--ink-soft); margin-bottom:34px;">
+        <a href="index.html" data-i18n="nav.home" style="color:var(--ink-soft)">Home</a> /
+        <a href="shop.html" data-i18n="nav.shop" style="color:var(--ink-soft)">Shop</a> /
+        <span id="pdpName2"></span>
+      </div>
+
+      <div class="pdp">
+        <div class="pdp-gallery">
+          <div class="pdp-gallery-main" id="pdpMainImage"></div>
+          <div class="pdp-thumbs" id="pdpThumbs"></div>
+        </div>
+
+        <div class="pdp-info">
+          <span class="product-cat" id="pdpCategory"></span>
+          <h1 id="pdpName"></h1>
+          <div class="pdp-rating">
+            <span class="stars" id="pdpStars"></span>
+            <span id="pdpRatingVal"></span>
+            <span id="pdpReviewCount"></span>
+          </div>
+          <div class="pdp-price" id="pdpPrice"></div>
+          <p class="pdp-desc" id="pdpDesc"></p>
+
+          <div class="pdp-block">
+            <h4 data-i18n="product.color">Color</h4>
+            <div class="color-select-row" id="colorSwatchRow"></div>
+            <div class="color-name" id="colorNameLabel"></div>
+          </div>
+
+          <div class="pdp-block">
+            <h4 data-i18n="product.quantity">Quantity</h4>
+            <div class="qty-selector">
+              <button id="qtyDecBtn" aria-label="decrease">−</button>
+              <span id="qtyVal">1</span>
+              <button id="qtyIncBtn" aria-label="increase">+</button>
+            </div>
+          </div>
+
+          <div class="pdp-actions">
+            <button class="btn btn-primary" id="addToCartBtn" data-i18n="product.addToCart">Add to Cart</button>
+            <button class="btn btn-gold" id="buyNowBtn" data-i18n="product.buyNow">Buy Now</button>
+            <button class="wishlist-btn" id="pdpWishBtn" style="position:static; width:52px; height:52px;" aria-label="wishlist"></button>
+          </div>
+
+          <div class="pdp-meta">
+            <span id="pdpSku"></span>
+            <span data-i18n="product.inStock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:70px; max-width:820px;">
+        <div class="pdp-tabs">
+          <button class="pdp-tab active" data-tab="desc" data-i18n="product.description">Description</button>
+          <button class="pdp-tab" data-tab="specs" data-i18n="product.specifications">Specifications</button>
+        </div>
+        <div id="tabDesc" class="pdp-tab-panel"><p class="pdp-desc" id="pdpDescFull"></p></div>
+        <ul id="tabSpecs" class="pdp-tab-panel pdp-specs" style="display:none;"></ul>
+      </div>
+
+      <div class="section-head" style="margin-top:100px;">
+        <h2 data-i18n="product.related">You May Also Like</h2>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+function bindTabs(){
+  document.querySelectorAll('.pdp-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.pdp-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('tabDesc').style.display = tab.dataset.tab === 'desc' ? 'block' : 'none';
+      document.getElementById('tabSpecs').style.display = tab.dataset.tab === 'specs' ? 'block' : 'none';
+    });
+  });
+}
+
+MB.init('shop').then(async () => {
+  await MBProducts.renderProductPage();
+  document.getElementById('pdpDescFull').textContent = document.getElementById('pdpDesc').textContent;
+  document.getElementById('pdpName2').textContent = document.getElementById('pdpName').textContent;
+  document.getElementById('pdpWishBtn').innerHTML = MB.svgIcon('heart');
+  bindTabs();
+
+  document.addEventListener('mb:rerender', async () => {
+    await MBProducts.renderProductPage();
+    document.getElementById('pdpDescFull').textContent = document.getElementById('pdpDesc').textContent;
+    document.getElementById('pdpName2').textContent = document.getElementById('pdpName').textContent;
+    document.getElementById('pdpWishBtn').innerHTML = MB.svgIcon('heart');
+  });
+});
+</script>
+</body>
+</html>

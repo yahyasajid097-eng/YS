@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header" style="padding:90px 20px 50px;">
+    <span class="eyebrow" data-i18n="checkout.title">Checkout</span>
+    <h1 data-i18n="checkout.title">Checkout</h1>
+  </div>
+
+  <section class="section" style="padding-top:50px;">
+    <div class="container">
+      <div class="cart-layout">
+        <form id="checkoutForm" novalidate>
+          <h3 style="font-family:var(--font-display); font-size:20px; margin-bottom:24px;" data-i18n="checkout.contactInfo">Contact Information</h3>
+          <div class="form-grid">
+            <div class="form-field full">
+              <label data-i18n="checkout.fullName">Full Name</label>
+              <input type="text" id="fName" required>
+              <div class="field-error" data-i18n="checkout.required">This field is required</div>
+            </div>
+            <div class="form-field">
+              <label data-i18n="checkout.phone">Phone Number</label>
+              <input type="tel" id="fPhone" required placeholder="06 12 34 56 78">
+              <div class="field-error" data-i18n="checkout.invalidPhone">Please enter a valid phone number</div>
+            </div>
+            <div class="form-field">
+              <label data-i18n="checkout.city">City</label>
+              <select id="cityField" required>
+                <option value="" disabled selected></option>
+              </select>
+              <div class="field-error" data-i18n="checkout.required">This field is required</div>
+            </div>
+            <div class="form-field full">
+              <label data-i18n="checkout.address">Full Address</label>
+              <textarea id="fAddress" required data-i18n-placeholder="checkout.addressPlaceholder" placeholder="Street, building, apartment, landmark..." rows="3"></textarea>
+              <div class="field-error" data-i18n="checkout.required">This field is required</div>
+            </div>
+            <div class="form-field full">
+              <label data-i18n="checkout.notes">Order Notes (optional)</label>
+              <textarea id="fNotes" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="payment-option">
+            <div id="payIcon"></div>
+            <div>
+              <h4 data-i18n="checkout.cod">Cash on Delivery</h4>
+              <p data-i18n="checkout.codDesc">Pay in cash when your order is delivered to your address.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-block" id="placeOrderBtn">
+            <span id="waIcon"></span> <span data-i18n="checkout.placeOrder">Confirm Order via WhatsApp</span>
+          </button>
+        </form>
+
+        <div class="summary-card">
+          <h3 data-i18n="checkout.orderSummary">Order Summary</h3>
+          <div id="checkoutItems"></div>
+          <div class="summary-row" style="margin-top:18px; padding-top:18px; border-top:1px solid var(--line);"><span data-i18n="cart.subtotal">Subtotal</span><span id="sumSubtotal">—</span></div>
+          <div class="summary-row"><span data-i18n="cart.shipping">Shipping</span><span id="sumShipping">—</span></div>
+          <div class="summary-row total"><span data-i18n="cart.total">Total</span><span id="sumTotal">—</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+MB.init('checkout').then(() => {
+  if(MBCart.count() === 0){ location.href = 'cart.html'; return; }
+  document.getElementById('payIcon').innerHTML = MB.svgIcon('truck');
+  document.getElementById('waIcon').innerHTML = MB.svgIcon('whatsapp');
+  MBCart.renderCheckoutSummary();
+  document.addEventListener('mb:rerender', () => MBCart.renderCheckoutSummary());
+
+  const form = document.getElementById('checkoutForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('fName');
+    const phone = document.getElementById('fPhone');
+    const city = document.getElementById('cityField');
+    const address = document.getElementById('fAddress');
+
+    [name, address].forEach(f => {
+      f.closest('.form-field').classList.toggle('error', !f.value.trim());
+      if(!f.value.trim()) valid = false;
+    });
+    const phoneValid = /^[0-9+\s-]{9,}$/.test(phone.value.trim());
+    phone.closest('.form-field').classList.toggle('error', !phoneValid);
+    if(!phoneValid) valid = false;
+    city.closest('.form-field').classList.toggle('error', !city.value);
+    if(!city.value) valid = false;
+
+    if(!valid) return;
+
+    MBCart.submitOrder({
+      name: name.value.trim(),
+      phone: phone.value.trim(),
+      city: city.value,
+      address: address.value.trim(),
+      notes: document.getElementById('fNotes').value.trim()
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="faq">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header">
+    <svg class="crescent-bg" viewBox="0 0 100 100"><path fill="#D4AF37" d="M62 8C42 15 28 35 28 55C28 75 42 90 62 96C36 98 14 78 14 52C14 26 36 6 62 8Z"/></svg>
+    <span class="eyebrow" data-i18n="nav.faq">FAQ</span>
+    <h1 data-i18n="nav.faq">Frequently Asked Questions</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.faq">FAQ</span></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+const FAQ = {
+  en: [
+    ['How does Cash on Delivery work?', 'You place your order online with no payment required. Our delivery partner brings it to your address, and you pay in cash at the moment you receive it.'],
+    ['Which cities do you deliver to?', 'We deliver to all major cities in Morocco including Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir and more. Delivery typically takes 2–5 business days.'],
+    ['Can I return or exchange a bag?', 'Yes — you have 14 days from delivery to return an unused item in its original condition for a refund or exchange. See our Return & Refund Policy for details.'],
+    ['Are your bags made of real leather?', 'Most of our pieces use full-grain genuine leather; a few styles use premium vegan leather. Materials are listed under each product\'s specifications.'],
+    ['How do I know my size / bag dimensions?', 'Every product page lists exact dimensions (height x width x depth) under Specifications so you know exactly what to expect.'],
+    ['Do you offer gift wrapping?', 'Yes, every order is packaged in our signature Moon Blossom box at no extra charge, ready to gift.']
+  ],
+  fr: [
+    ['Comment fonctionne le paiement à la livraison ?', 'Vous passez votre commande en ligne sans aucun paiement requis. Notre partenaire de livraison l\'apporte à votre adresse, et vous payez en espèces au moment de la réception.'],
+    ['Dans quelles villes livrez-vous ?', 'Nous livrons dans toutes les grandes villes du Maroc : Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir et plus. La livraison prend généralement 2 à 5 jours ouvrables.'],
+    ['Puis-je retourner ou échanger un sac ?', 'Oui — vous disposez de 14 jours après la livraison pour retourner un article non utilisé dans son état d\'origine pour un remboursement ou un échange.'],
+    ['Vos sacs sont-ils en cuir véritable ?', 'La plupart de nos pièces utilisent du cuir pleine fleur véritable ; certains modèles utilisent du cuir végan premium. Les matériaux sont indiqués dans les spécifications de chaque produit.'],
+    ['Comment connaître les dimensions du sac ?', 'Chaque page produit indique les dimensions exactes (hauteur x largeur x profondeur) dans la section Spécifications.'],
+    ['Proposez-vous un emballage cadeau ?', 'Oui, chaque commande est emballée dans notre boîte signature Moon Blossom sans frais supplémentaires.']
+  ],
+  ar: [
+    ['كيف يعمل نظام الدفع عند الاستلام؟', 'تقومين بتقديم طلبك عبر الموقع دون الحاجة لأي دفع مسبق. يقوم شريك التوصيل بإحضار طلبك إلى عنوانك، وتدفعين نقداً عند استلامه.'],
+    ['ما هي المدن التي توصلون إليها؟', 'نوصل إلى جميع المدن المغربية الرئيسية بما في ذلك الدار البيضاء، الرباط، مراكش، فاس، طنجة، أكادير وغيرها. يستغرق التوصيل عادة من 2 إلى 5 أيام عمل.'],
+    ['هل يمكنني إرجاع أو استبدال الحقيبة؟', 'نعم — لديك 14 يوماً من تاريخ الاستلام لإرجاع منتج غير مستخدم بحالته الأصلية مقابل استرداد المبلغ أو الاستبدال.'],
+    ['هل حقائبكم مصنوعة من جلد طبيعي؟', 'معظم قطعنا مصنوعة من جلد طبيعي فاخر؛ بعض الموديلات تستخدم جلداً نباتياً فاخراً. المواد مذكورة ضمن مواصفات كل منتج.'],
+    ['كيف أعرف أبعاد الحقيبة؟', 'كل صفحة منتج تعرض الأبعاد الدقيقة (الطول × العرض × العمق) ضمن قسم المواصفات.'],
+    ['هل تقدمون تغليف الهدايا؟', 'نعم، يتم تغليف كل طلب في صندوق Moon Blossom المميز دون أي تكلفة إضافية.']
+  ]
+};
+
+MB.init('faq').then(() => {
+  function render(){
+    const list = FAQ[MB.state.lang] || FAQ.en;
+    document.getElementById('faqList').innerHTML = list.map((item,i) => `
+      <div class="faq-item ${i===0?'open':''}">
+        <button class="faq-q">${item[0]} ${MB.svgIcon('plus')}</button>
+        <div class="faq-a" style="${i===0?'max-height:300px;':''}"><p>${item[1]}</p></div>
+      </div>`).join('');
+    document.querySelectorAll('.faq-item').forEach(fi => {
+      fi.querySelector('.faq-q').addEventListener('click', () => {
+        const wasOpen = fi.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = 0; });
+        if(!wasOpen){ fi.classList.add('open'); fi.querySelector('.faq-a').style.maxHeight = fi.querySelector('.faq-a').scrollHeight + 'px'; }
+      });
+    });
+  }
+  render();
+  document.addEventListener('mb:rerender', render);
+});
+</script>
+</body>
+</html>

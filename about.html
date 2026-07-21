@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Moon Blossom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D4AF37' d='M15.5 3.5C11 5 8.5 9 8.5 13.5C8.5 18 11 20.5 15.5 22C10 22.5 5 18 5 12.5C5 7 10 2.5 15.5 3.5Z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+<a href="#main" class="skip-link">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+  <div class="page-header">
+    <svg class="crescent-bg" viewBox="0 0 100 100"><path fill="#D4AF37" d="M62 8C42 15 28 35 28 55C28 75 42 90 62 96C36 98 14 78 14 52C14 26 36 6 62 8Z"/></svg>
+    <span class="eyebrow" data-i18n="nav.about">About</span>
+    <h1 data-i18n="sections.story">Our Story</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.about">About</span></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="story-wrap">
+        <div class="story-media reveal">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path stroke="#D4AF37" stroke-width="2" fill="#D4AF37" fill-opacity="0.08" d="M26 30C26 30 24 92 34 92H66C76 92 74 30 74 30C74 24 63 20 50 20C37 20 26 24 26 30Z" stroke-linejoin="round"/><path d="M30 30C28 14 34 4 50 4C58 4 62 10 62 16" stroke="#D4AF37" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="story-text reveal">
+          <span class="eyebrow" data-i18n="hero.eyebrow">New Season Edit</span>
+          <h2 data-i18n="hero.title">Bloom Under the Moon</h2>
+          <p data-i18n="sections.storyText">Moon Blossom was born from a simple belief...</p>
+        </div>
+      </div>
+
+      <div class="about-values mt-lg">
+        <div class="value-card reveal">
+          <div class="feature-icon" id="valIcon1"></div>
+          <h3 data-i18n="why.f1t">Premium Materials</h3>
+          <p data-i18n="why.f1d">Full-grain leather and hand-finished gold hardware in every piece.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="feature-icon" id="valIcon2"></div>
+          <h3 data-i18n="why.f3t">Fast Delivery</h3>
+          <p data-i18n="why.f3d">2–5 business days across all major Moroccan cities.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="feature-icon" id="valIcon3"></div>
+          <h3 data-i18n="why.f4t">Easy Returns</h3>
+          <p data-i18n="why.f4d">14-day return window, no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+MB.init('about').then(() => {
+  document.getElementById('valIcon1').innerHTML = MB.svgIcon('leaf');
+  document.getElementById('valIcon2').innerHTML = MB.svgIcon('truck');
+  document.getElementById('valIcon3').innerHTML = MB.svgIcon('shield');
+  document.addEventListener('mb:rerender', () => {
+    document.getElementById('valIcon1').innerHTML = MB.svgIcon('leaf');
+    document.getElementById('valIcon2').innerHTML = MB.svgIcon('truck');
+    document.getElementById('valIcon3').innerHTML = MB.svgIcon('shield');
+  });
+});
+</script>
+</body>
+</html>
