@@ -19,7 +19,7 @@ const MBProducts = (() => {
       <div class="product-media">
         ${p.badge ? `<span class="product-badge ${p.badge==='sale'?'sale':''}">${badgeLabel(p.badge)}</span>` : ''}
         <button class="wishlist-btn ${wished?'active':''}" data-wish="${p.id}" aria-label="${MB.t('product.wishlist')}">${MB.svgIcon('heart')}</button>
-        <a href="product.html?slug=${p.slug}">${MB.bagIllustration(p.category, p.colors[0].hex)}</a>
+        <a href="product.html?slug=${p.slug}">${MB.productMedia(p, p.colors[0].hex)}</a>
         <button class="quick-add" data-quickadd="${p.id}">${MB.t('product.addToCart')}</button>
       </div>
       <a href="product.html?slug=${p.slug}" class="product-info">
@@ -183,6 +183,7 @@ const MBProducts = (() => {
   let currentProduct = null;
   let currentColor = null;
   let currentQty = 1;
+  let currentImgIndex = 0;
 
   async function renderProductPage(){
     catalogCache = await MB.loadCatalog();
@@ -191,6 +192,7 @@ const MBProducts = (() => {
     currentProduct = p;
     currentColor = p.colors[0].hex;
     currentQty = 1;
+    currentImgIndex = 0;
     if(!p){ location.href = '404.html'; return; }
 
     document.title = `${MB.fieldT(p.name)} — Moon Blossom`;
@@ -215,13 +217,25 @@ const MBProducts = (() => {
 
   function renderGallery(){
     const main = document.getElementById('pdpMainImage');
-    main.innerHTML = MB.bagIllustration(currentProduct.category, currentColor);
     const thumbs = document.getElementById('pdpThumbs');
-    thumbs.innerHTML = currentProduct.colors.map((c,i) => `<div class="pdp-thumb ${c.hex===currentColor?'active':''}" data-hex="${c.hex}">${MB.bagIllustration(currentProduct.category, c.hex)}</div>`).join('');
-    thumbs.querySelectorAll('.pdp-thumb').forEach(t => t.addEventListener('click', () => {
-      currentColor = t.dataset.hex;
-      renderGallery(); renderColorSwatches();
-    }));
+    const p = currentProduct;
+
+    if(p.images && p.images.length){
+      main.innerHTML = MB.productMedia(p, currentColor, currentImgIndex);
+      thumbs.innerHTML = p.images.map((img,i) => `<div class="pdp-thumb ${i===currentImgIndex?'active':''}" data-idx="${i}">${MB.productMedia(p, currentColor, i)}</div>`).join('');
+      thumbs.querySelectorAll('.pdp-thumb').forEach(t => t.addEventListener('click', () => {
+        currentImgIndex = Number(t.dataset.idx);
+        renderGallery();
+      }));
+    } else {
+      currentImgIndex = 0;
+      main.innerHTML = MB.bagIllustration(p.category, currentColor);
+      thumbs.innerHTML = p.colors.map((c) => `<div class="pdp-thumb ${c.hex===currentColor?'active':''}" data-hex="${c.hex}">${MB.bagIllustration(p.category, c.hex)}</div>`).join('');
+      thumbs.querySelectorAll('.pdp-thumb').forEach(t => t.addEventListener('click', () => {
+        currentColor = t.dataset.hex;
+        renderGallery(); renderColorSwatches();
+      }));
+    }
   }
 
   function renderPrice(){

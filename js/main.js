@@ -80,6 +80,18 @@ const MB = (() => {
 
   function svgIcon(name){ return icons[name] || ''; }
 
+  /* ---------------- product media: real photo if provided, else illustration ---------------- */
+  function productMedia(p, colorHex, imgIndex){
+    const hex = colorHex || (p.colors && p.colors[0] && p.colors[0].hex) || '#D4AF37';
+    if(p.images && p.images.length){
+      const idx = (typeof imgIndex === 'number' && p.images[imgIndex]) ? imgIndex : 0;
+      const src = escapeHtml(p.images[idx]);
+      const alt = escapeHtml(fieldT(p.name));
+      return `<img src="${src}" alt="${alt}" loading="lazy" onerror="MBImgFallback(this,'${p.category}','${hex}')">`;
+    }
+    return bagIllustration(p.category, hex);
+  }
+
   /* ---------------- bag illustration (per category, tinted) ---------------- */
   function bagIllustration(category, hex){
     const c = hex || '#D4AF37';
@@ -327,10 +339,19 @@ const MB = (() => {
   }
 
   return {
-    init, t, fieldT, formatPrice, escapeHtml, svgIcon, bagIllustration,
+    init, t, fieldT, formatPrice, escapeHtml, svgIcon, bagIllustration, productMedia,
     loadCatalog, state, toast, initReveal, initPetals, renderChrome, setLang, updateCartBadge
   };
 })();
+
+// Global fallback: if a product photo fails to load (missing file, wrong path),
+// replace it with the elegant line-art illustration instead of a broken image icon.
+function MBImgFallback(imgEl, category, hex){
+  try{
+    const svg = MB.bagIllustration(category, hex);
+    imgEl.outerHTML = svg;
+  }catch(e){ imgEl.style.display = 'none'; }
+}
 
 if('serviceWorker' in navigator){
   window.addEventListener('load', () => {

@@ -82,7 +82,7 @@ const MBCart = (() => {
       const colorObj = p.colors.find(c => c.hex === item.color) || p.colors[0];
       return `
       <div class="cart-item" data-id="${p.id}" data-color="${item.color}">
-        <a href="product.html?slug=${p.slug}" class="cart-item-media">${MB.bagIllustration(p.category, item.color)}</a>
+        <a href="product.html?slug=${p.slug}" class="cart-item-media">${MB.productMedia(p, item.color)}</a>
         <div class="cart-item-body">
           <a href="product.html?slug=${p.slug}"><div class="cart-item-name">${MB.fieldT(p.name)}</div></a>
           <div class="cart-item-meta">${MB.t('product.color')}: ${MB.fieldT(colorObj.name)}</div>
