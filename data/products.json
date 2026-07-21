@@ -1,0 +1,337 @@
+{
+  "categories": [
+    { "id": "tote", "name": { "en": "Tote Bags", "fr": "Sacs Cabas", "ar": "حقائب توتيه" } },
+    { "id": "shoulder", "name": { "en": "Shoulder Bags", "fr": "Sacs à Épaule", "ar": "حقائب الكتف" } },
+    { "id": "clutch", "name": { "en": "Clutches", "fr": "Pochettes", "ar": "حقائب اليد الصغيرة" } },
+    { "id": "crossbody", "name": { "en": "Crossbody", "fr": "Bandoulière", "ar": "حقائب كروس بودي" } },
+    { "id": "mini", "name": { "en": "Mini Bags", "fr": "Mini Sacs", "ar": "حقائب صغيرة" } }
+  ],
+  "products": [
+    {
+      "id": "mb-001",
+      "slug": "lune-doree-tote",
+      "category": "tote",
+      "name": { "en": "Lune Dorée Tote", "fr": "Cabas Lune Dorée", "ar": "حقيبة لون دوريه" },
+      "description": {
+        "en": "A structured tote crafted from full-grain leather, finished with brushed gold hardware. Spacious enough for everyday essentials, refined enough for the boardroom.",
+        "fr": "Un cabas structuré en cuir pleine fleur, orné de quincaillerie dorée brossée. Assez spacieux pour l'essentiel du quotidien, assez raffiné pour le bureau.",
+        "ar": "حقيبة توتيه أنيقة مصنوعة من الجلد الفاخر بتفاصيل ذهبية. واسعة بما يكفي لأغراضك اليومية وراقية بما يكفي لأي مناسبة."
+      },
+      "price": 1290,
+      "discountPrice": 990,
+      "colors": [
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Ivory", "fr": "Ivoire", "ar": "عاجي" }, "hex": "#F5F0E6" },
+        { "name": { "en": "Champagne Gold", "fr": "Or Champagne", "ar": "ذهبي شمبانيا" }, "hex": "#C9A24B" }
+      ],
+      "specs": {
+        "en": ["Full-grain genuine leather", "Brushed gold-tone hardware", "Interior zip & phone pocket", "Dimensions: 38 x 28 x 14 cm", "Magnetic closure"],
+        "fr": ["Cuir pleine fleur véritable", "Quincaillerie dorée brossée", "Poche zippée et poche téléphone intérieures", "Dimensions : 38 x 28 x 14 cm", "Fermeture magnétique"],
+        "ar": ["جلد طبيعي فاخر", "تفاصيل معدنية ذهبية", "جيب داخلي بسحاب وجيب للهاتف", "الأبعاد: 38 × 28 × 14 سم", "إغلاق مغناطيسي"]
+      },
+      "badge": "bestseller",
+      "featured": true,
+      "newArrival": false,
+      "rating": 4.9,
+      "reviewCount": 128
+    },
+    {
+      "id": "mb-002",
+      "slug": "clair-de-lune-shoulder",
+      "category": "shoulder",
+      "name": { "en": "Clair de Lune Shoulder Bag", "fr": "Sac Épaule Clair de Lune", "ar": "حقيبة كلير دو لون" },
+      "description": {
+        "en": "Soft quilted leather in a rounded silhouette, carried by a delicate gold chain strap that catches the light with every step.",
+        "fr": "Cuir matelassé doux à la silhouette arrondie, porté par une fine chaîne dorée qui capte la lumière à chaque pas.",
+        "ar": "جلد ناعم مبطن بشكل دائري أنيق، مع سلسلة ذهبية رقيقة تعكس الضوء مع كل خطوة."
+      },
+      "price": 890,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Blush Pink", "fr": "Rose Poudré", "ar": "وردي فاتح" }, "hex": "#E8C4C4" },
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" }
+      ],
+      "specs": {
+        "en": ["Quilted lambskin-textured leather", "Gold chain strap, 55cm drop", "Single interior pocket", "Dimensions: 24 x 16 x 8 cm", "Snap closure"],
+        "fr": ["Cuir texturé matelassé", "Chaîne dorée, chute de 55cm", "Une poche intérieure", "Dimensions : 24 x 16 x 8 cm", "Fermeture pression"],
+        "ar": ["جلد مبطن بملمس فاخر", "سلسلة ذهبية طولها 55 سم", "جيب داخلي واحد", "الأبعاد: 24 × 16 × 8 سم", "إغلاق بزر ضغط"]
+      },
+      "badge": "new",
+      "featured": true,
+      "newArrival": true,
+      "rating": 4.8,
+      "reviewCount": 76
+    },
+    {
+      "id": "mb-003",
+      "slug": "eclipse-clutch",
+      "category": "clutch",
+      "name": { "en": "Eclipse Evening Clutch", "fr": "Pochette de Soirée Eclipse", "ar": "حقيبة إكليبس المسائية" },
+      "description": {
+        "en": "A sculptural evening clutch in satin-finish leather with a sculpted gold clasp inspired by a crescent moon.",
+        "fr": "Une pochette de soirée sculpturale en cuir satiné, avec un fermoir doré sculpté inspiré d'un croissant de lune.",
+        "ar": "حقيبة سهرة أنيقة بلمسة ساتان وجلد فاخر، مع مشبك ذهبي مستوحى من الهلال."
+      },
+      "price": 650,
+      "discountPrice": 520,
+      "colors": [
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Deep Emerald", "fr": "Émeraude Profond", "ar": "أخضر زمردي" }, "hex": "#1F3B33" }
+      ],
+      "specs": {
+        "en": ["Satin-finish vegan leather", "Sculpted crescent clasp", "Detachable gold chain", "Dimensions: 22 x 12 x 4 cm"],
+        "fr": ["Cuir végan satiné", "Fermoir croissant sculpté", "Chaîne dorée amovible", "Dimensions : 22 x 12 x 4 cm"],
+        "ar": ["جلد نباتي بلمسة ساتان", "مشبك على شكل هلال", "سلسلة ذهبية قابلة للفصل", "الأبعاد: 22 × 12 × 4 سم"]
+      },
+      "badge": "bestseller",
+      "featured": true,
+      "newArrival": false,
+      "rating": 4.9,
+      "reviewCount": 94
+    },
+    {
+      "id": "mb-004",
+      "slug": "aurora-crossbody",
+      "category": "crossbody",
+      "name": { "en": "Aurora Crossbody", "fr": "Bandoulière Aurora", "ar": "حقيبة أورورا كروس" },
+      "description": {
+        "en": "Compact and versatile, this crossbody moves effortlessly from day to night with an adjustable gold-link strap.",
+        "fr": "Compacte et polyvalente, cette bandoulière s'adapte du jour à la nuit grâce à une bandoulière dorée ajustable.",
+        "ar": "حقيبة عملية وأنيقة تناسب النهار والمساء، مع حزام ذهبي قابل للتعديل."
+      },
+      "price": 750,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Camel", "fr": "Camel", "ar": "كاميل" }, "hex": "#B08A5A" },
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Ivory", "fr": "Ivoire", "ar": "عاجي" }, "hex": "#F5F0E6" }
+      ],
+      "specs": {
+        "en": ["Textured genuine leather", "Adjustable gold-link strap", "Front flap with magnetic snap", "Dimensions: 20 x 15 x 7 cm"],
+        "fr": ["Cuir véritable texturé", "Bandoulière dorée ajustable", "Rabat avant à fermeture magnétique", "Dimensions : 20 x 15 x 7 cm"],
+        "ar": ["جلد طبيعي بملمس مميز", "حزام ذهبي قابل للتعديل", "غطاء أمامي بإغلاق مغناطيسي", "الأبعاد: 20 × 15 × 7 سم"]
+      },
+      "badge": "",
+      "featured": false,
+      "newArrival": true,
+      "rating": 4.7,
+      "reviewCount": 52
+    },
+    {
+      "id": "mb-005",
+      "slug": "petal-mini",
+      "category": "mini",
+      "name": { "en": "Petal Mini Bag", "fr": "Mini Sac Petal", "ar": "حقيبة بيتال الصغيرة" },
+      "description": {
+        "en": "A petite statement piece shaped like an unfurling petal, finished with a delicate gold clasp.",
+        "fr": "Une pièce miniature en forme de pétale déployé, ornée d'un délicat fermoir doré.",
+        "ar": "قطعة صغيرة أنيقة على شكل بتلة زهرة، مع مشبك ذهبي رقيق."
+      },
+      "price": 590,
+      "discountPrice": 450,
+      "colors": [
+        { "name": { "en": "Blush Pink", "fr": "Rose Poudré", "ar": "وردي فاتح" }, "hex": "#E8C4C4" },
+        { "name": { "en": "Champagne Gold", "fr": "Or Champagne", "ar": "ذهبي شمبانيا" }, "hex": "#C9A24B" }
+      ],
+      "specs": {
+        "en": ["Smooth vegan leather", "Delicate gold clasp", "Long adjustable strap", "Dimensions: 16 x 10 x 5 cm"],
+        "fr": ["Cuir végan lisse", "Fermoir doré délicat", "Bandoulière longue ajustable", "Dimensions : 16 x 10 x 5 cm"],
+        "ar": ["جلد نباتي ناعم", "مشبك ذهبي رقيق", "حزام طويل قابل للتعديل", "الأبعاد: 16 × 10 × 5 سم"]
+      },
+      "badge": "new",
+      "featured": false,
+      "newArrival": true,
+      "rating": 4.8,
+      "reviewCount": 41
+    },
+    {
+      "id": "mb-006",
+      "slug": "nocturne-tote",
+      "category": "tote",
+      "name": { "en": "Nocturne Weekender Tote", "fr": "Cabas Week-end Nocturne", "ar": "حقيبة نوكتورن الكبيرة" },
+      "description": {
+        "en": "Oversized and effortlessly elegant, built for travel days and long errands without ever losing its polish.",
+        "fr": "Surdimensionné et élégant sans effort, conçu pour les jours de voyage sans jamais perdre son raffinement.",
+        "ar": "حقيبة كبيرة الحجم بأناقة لا تتأثر بمشاوير اليوم أو رحلات السفر."
+      },
+      "price": 1450,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Camel", "fr": "Camel", "ar": "كاميل" }, "hex": "#B08A5A" }
+      ],
+      "specs": {
+        "en": ["Full-grain genuine leather", "Reinforced double handles", "Interior laptop sleeve", "Dimensions: 44 x 32 x 16 cm"],
+        "fr": ["Cuir pleine fleur véritable", "Doubles anses renforcées", "Poche intérieure pour ordinateur", "Dimensions : 44 x 32 x 16 cm"],
+        "ar": ["جلد طبيعي فاخر", "مقابض مزدوجة معززة", "جيب داخلي للحاسوب المحمول", "الأبعاد: 44 × 32 × 16 سم"]
+      },
+      "badge": "",
+      "featured": false,
+      "newArrival": false,
+      "rating": 4.6,
+      "reviewCount": 33
+    },
+    {
+      "id": "mb-007",
+      "slug": "stardust-shoulder",
+      "category": "shoulder",
+      "name": { "en": "Stardust Shoulder Bag", "fr": "Sac Épaule Stardust", "ar": "حقيبة ستاردست" },
+      "description": {
+        "en": "Subtle shimmer leather with a structured flap silhouette — the bag that turns heads without saying a word.",
+        "fr": "Cuir légèrement scintillant à la silhouette structurée à rabat — le sac qui attire les regards sans un mot.",
+        "ar": "جلد بلمعان خفيف وتصميم أنيق بغطاء علوي، حقيبة تلفت الأنظار بأناقتها الصامتة."
+      },
+      "price": 980,
+      "discountPrice": 780,
+      "colors": [
+        { "name": { "en": "Ivory", "fr": "Ivoire", "ar": "عاجي" }, "hex": "#F5F0E6" },
+        { "name": { "en": "Deep Emerald", "fr": "Émeraude Profond", "ar": "أخضر زمردي" }, "hex": "#1F3B33" }
+      ],
+      "specs": {
+        "en": ["Shimmer-finish leather", "Structured flap with gold clasp", "Adjustable & removable strap", "Dimensions: 26 x 18 x 9 cm"],
+        "fr": ["Cuir à finition scintillante", "Rabat structuré à fermoir doré", "Bandoulière amovible et ajustable", "Dimensions : 26 x 18 x 9 cm"],
+        "ar": ["جلد بلمسة لامعة خفيفة", "غطاء أنيق بمشبك ذهبي", "حزام قابل للفصل والتعديل", "الأبعاد: 26 × 18 × 9 سم"]
+      },
+      "badge": "sale",
+      "featured": true,
+      "newArrival": false,
+      "rating": 4.9,
+      "reviewCount": 61
+    },
+    {
+      "id": "mb-008",
+      "slug": "velours-clutch",
+      "category": "clutch",
+      "name": { "en": "Velours Night Clutch", "fr": "Pochette de Nuit Velours", "ar": "حقيبة فيلور المسائية" },
+      "description": {
+        "en": "Plush velvet-textured leather clutch with a jeweled gold clasp, designed for your most memorable evenings.",
+        "fr": "Pochette en cuir texturé velours avec fermoir doré orné, conçue pour vos soirées les plus mémorables.",
+        "ar": "حقيبة مخملية فاخرة بمشبك ذهبي مرصع، مصممة لأجمل لياليك."
+      },
+      "price": 600,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Blush Pink", "fr": "Rose Poudré", "ar": "وردي فاتح" }, "hex": "#E8C4C4" }
+      ],
+      "specs": {
+        "en": ["Velvet-textured vegan leather", "Jeweled gold clasp", "Optional wrist strap", "Dimensions: 20 x 11 x 4 cm"],
+        "fr": ["Cuir végan texturé velours", "Fermoir doré orné", "Dragonne amovible", "Dimensions : 20 x 11 x 4 cm"],
+        "ar": ["جلد نباتي بملمس مخملي", "مشبك ذهبي مرصع", "حزام معصم اختياري", "الأبعاد: 20 × 11 × 4 سم"]
+      },
+      "badge": "",
+      "featured": false,
+      "newArrival": false,
+      "rating": 4.7,
+      "reviewCount": 29
+    },
+    {
+      "id": "mb-009",
+      "slug": "halo-crossbody",
+      "category": "crossbody",
+      "name": { "en": "Halo Crossbody", "fr": "Bandoulière Halo", "ar": "حقيبة هالو كروس" },
+      "description": {
+        "en": "A rounded crossbody with a circular gold ring detail, inspired by a halo of moonlight.",
+        "fr": "Une bandoulière arrondie ornée d'un anneau doré circulaire, inspirée d'un halo de lune.",
+        "ar": "حقيبة دائرية أنيقة بحلقة ذهبية مستوحاة من هالة ضوء القمر."
+      },
+      "price": 720,
+      "discountPrice": 599,
+      "colors": [
+        { "name": { "en": "Camel", "fr": "Camel", "ar": "كاميل" }, "hex": "#B08A5A" },
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" }
+      ],
+      "specs": {
+        "en": ["Smooth genuine leather", "Signature gold ring detail", "Adjustable strap, 60-110cm", "Dimensions: 18 x 14 x 6 cm"],
+        "fr": ["Cuir véritable lisse", "Anneau doré signature", "Bandoulière ajustable, 60-110cm", "Dimensions : 18 x 14 x 6 cm"],
+        "ar": ["جلد طبيعي ناعم", "حلقة ذهبية مميزة", "حزام قابل للتعديل 60-110 سم", "الأبعاد: 18 × 14 × 6 سم"]
+      },
+      "badge": "sale",
+      "featured": false,
+      "newArrival": false,
+      "rating": 4.8,
+      "reviewCount": 47
+    },
+    {
+      "id": "mb-010",
+      "slug": "bloom-mini",
+      "category": "mini",
+      "name": { "en": "Bloom Top-Handle Mini", "fr": "Mini Sac Bloom Poignée", "ar": "حقيبة بلوم الصغيرة" },
+      "description": {
+        "en": "A dainty top-handle bag with a sculpted silhouette, perfectly sized for the essentials that matter most.",
+        "fr": "Un petit sac à poignée à la silhouette sculptée, parfaitement dimensionné pour l'essentiel.",
+        "ar": "حقيبة صغيرة بمقبض علوي وتصميم منحوت أنيق، بحجم مثالي لأساسياتك."
+      },
+      "price": 540,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Ivory", "fr": "Ivoire", "ar": "عاجي" }, "hex": "#F5F0E6" },
+        { "name": { "en": "Deep Emerald", "fr": "Émeraude Profond", "ar": "أخضر زمردي" }, "hex": "#1F3B33" }
+      ],
+      "specs": {
+        "en": ["Structured genuine leather", "Top handle & detachable strap", "Interior card slots", "Dimensions: 17 x 12 x 8 cm"],
+        "fr": ["Cuir véritable structuré", "Poignée et bandoulière amovible", "Fentes à cartes intérieures", "Dimensions : 17 x 12 x 8 cm"],
+        "ar": ["جلد طبيعي متين", "مقبض علوي وحزام قابل للفصل", "فتحات داخلية للبطاقات", "الأبعاد: 17 × 12 × 8 سم"]
+      },
+      "badge": "new",
+      "featured": false,
+      "newArrival": true,
+      "rating": 4.9,
+      "reviewCount": 22
+    },
+    {
+      "id": "mb-011",
+      "slug": "reverie-tote",
+      "category": "tote",
+      "name": { "en": "Rêverie Soft Tote", "fr": "Cabas Souple Rêverie", "ar": "حقيبة ريفري الناعمة" },
+      "description": {
+        "en": "Unstructured and slouchy in the most elegant way, this tote softens with wear and only gets better with time.",
+        "fr": "Sans structure et souple avec élégance, ce cabas s'assouplit avec le temps et ne fait que s'améliorer.",
+        "ar": "حقيبة ناعمة غير مهيكلة بأناقة، تزداد جمالاً مع الاستخدام."
+      },
+      "price": 1090,
+      "discountPrice": 890,
+      "colors": [
+        { "name": { "en": "Camel", "fr": "Camel", "ar": "كاميل" }, "hex": "#B08A5A" },
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" }
+      ],
+      "specs": {
+        "en": ["Soft pebbled leather", "Slouchy silhouette", "Interior zip pocket", "Dimensions: 40 x 30 x 12 cm"],
+        "fr": ["Cuir grainé souple", "Silhouette souple", "Poche zippée intérieure", "Dimensions : 40 x 30 x 12 cm"],
+        "ar": ["جلد ناعم محبب", "تصميم انسيابي", "جيب داخلي بسحاب", "الأبعاد: 40 × 30 × 12 سم"]
+      },
+      "badge": "sale",
+      "featured": true,
+      "newArrival": false,
+      "rating": 4.7,
+      "reviewCount": 38
+    },
+    {
+      "id": "mb-012",
+      "slug": "selene-shoulder",
+      "category": "shoulder",
+      "name": { "en": "Selene Structured Bag", "fr": "Sac Structuré Selene", "ar": "حقيبة سيلين الأنيقة" },
+      "description": {
+        "en": "Named after the moon goddess, this architecturally structured bag balances hard edges with soft, feminine curves.",
+        "fr": "Nommé d'après la déesse de la lune, ce sac architecturalement structuré équilibre des lignes nettes et des courbes féminines.",
+        "ar": "سميت على اسم إلهة القمر، حقيبة بتصميم هندسي أنيق يمزج بين الخطوط الحادة والانحناءات الناعمة."
+      },
+      "price": 1190,
+      "discountPrice": null,
+      "colors": [
+        { "name": { "en": "Onyx Black", "fr": "Noir Onyx", "ar": "أسود أونيكس" }, "hex": "#0D0D0D" },
+        { "name": { "en": "Champagne Gold", "fr": "Or Champagne", "ar": "ذهبي شمبانيا" }, "hex": "#C9A24B" }
+      ],
+      "specs": {
+        "en": ["Structured full-grain leather", "Sculpted gold-tone frame", "Detachable shoulder strap", "Dimensions: 28 x 20 x 10 cm"],
+        "fr": ["Cuir pleine fleur structuré", "Cadre doré sculpté", "Bandoulière amovible", "Dimensions : 28 x 20 x 10 cm"],
+        "ar": ["جلد فاخر بتصميم متين", "إطار ذهبي منحوت", "حزام كتف قابل للفصل", "الأبعاد: 28 × 20 × 10 سم"]
+      },
+      "badge": "bestseller",
+      "featured": true,
+      "newArrival": false,
+      "rating": 5.0,
+      "reviewCount": 87
+    }
+  ]
+}

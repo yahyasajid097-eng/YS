@@ -1,0 +1,83 @@
+{
+  "en": {
+    "dir": "ltr",
+    "nav": { "home": "Home", "shop": "Shop", "categories": "Categories", "about": "About", "contact": "Contact", "faq": "FAQ", "cart": "Cart", "search": "Search bags..." },
+    "hero": { "eyebrow": "New Season Edit", "title": "Bloom Under the Moon", "subtitle": "Handbags crafted for the woman who carries her own light.", "cta": "Discover the Collection", "ctaSecondary": "Shop Best Sellers" },
+    "sections": {
+      "featured": "Featured Collection", "featuredSub": "Pieces chosen for their quiet luxury",
+      "bestsellers": "Best Sellers", "bestsellersSub": "Loved again and again",
+      "newArrivals": "New Arrivals", "newArrivalsSub": "Fresh from the atelier",
+      "story": "Our Story", "storyText": "Moon Blossom was born from a simple belief: that a handbag should feel like an extension of who you are — elegant, quietly confident, and made to last. Each piece is designed in Morocco, inspired by the soft glow of moonlight and the fearless bloom of the women who wear them.",
+      "why": "Why Choose Moon Blossom", "reviews": "What Our Clients Say", "reviewsSub": "Real words from real women",
+      "instagram": "Follow @moonblossom.ma", "newsletter": "Join the Inner Circle", "newsletterSub": "Be first to know about new drops and private sales.", "newsletterPlaceholder": "Your email address", "newsletterBtn": "Subscribe"
+    },
+    "why": {
+      "f1t": "Premium Materials", "f1d": "Full-grain leather and hand-finished gold hardware in every piece.",
+      "f2t": "Cash on Delivery", "f2d": "Pay only when your order arrives at your door, anywhere in Morocco.",
+      "f3t": "Fast Delivery", "f3d": "2–5 business days across all major Moroccan cities.",
+      "f4t": "Easy Returns", "f4d": "14-day return window, no questions asked."
+    },
+    "product": { "addToCart": "Add to Cart", "buyNow": "Buy Now", "quantity": "Quantity", "color": "Color", "description": "Description", "specifications": "Specifications", "related": "You May Also Like", "reviews": "reviews", "inStock": "In Stock", "sku": "SKU", "share": "Share", "wishlist": "Add to Wishlist" },
+    "shop": { "title": "Shop All Bags", "filterBy": "Filter", "allCategories": "All Categories", "priceRange": "Price Range", "sortBy": "Sort by", "sortNewest": "Newest", "sortPriceLow": "Price: Low to High", "sortPriceHigh": "Price: High to Low", "sortPopular": "Most Popular", "noResults": "No bags match your filters.", "resetFilters": "Reset Filters", "results": "results" },
+    "cart": { "title": "Your Shopping Bag", "empty": "Your bag is empty.", "emptySub": "Discover our collection and find your new favorite.", "continueShopping": "Continue Shopping", "subtotal": "Subtotal", "shipping": "Shipping", "free": "Free", "total": "Total", "checkout": "Proceed to Checkout", "remove": "Remove", "each": "each" },
+    "checkout": { "title": "Checkout", "contactInfo": "Contact Information", "fullName": "Full Name", "phone": "Phone Number", "city": "City", "address": "Full Address", "addressPlaceholder": "Street, building, apartment, landmark...", "notes": "Order Notes (optional)", "orderSummary": "Order Summary", "paymentMethod": "Payment Method", "cod": "Cash on Delivery", "codDesc": "Pay in cash when your order is delivered to your address.", "placeOrder": "Confirm Order via WhatsApp", "required": "This field is required", "invalidPhone": "Please enter a valid phone number" },
+    "footer": { "shop": "Shop", "help": "Help", "company": "Company", "legal": "Legal", "privacy": "Privacy Policy", "returns": "Return & Refund Policy", "shipping": "Shipping Policy", "rights": "All rights reserved.", "madeIn": "Designed with love in Morocco" },
+    "badges": { "new": "New", "sale": "Sale", "bestseller": "Bestseller" },
+    "notFound": { "title": "404", "subtitle": "This page has drifted into the night.", "text": "The page you're looking for doesn't exist or has been moved.", "cta": "Return Home" },
+    "misc": { "off": "OFF", "from": "From", "loading": "Loading...", "close": "Close", "menu": "Menu", "language": "Language" }
+  },
+  "fr": {
+    "dir": "ltr",
+    "nav": { "home": "Accueil", "shop": "Boutique", "categories": "Catégories", "about": "À Propos", "contact": "Contact", "faq": "FAQ", "cart": "Panier", "search": "Rechercher un sac..." },
+    "hero": { "eyebrow": "Nouvelle Collection", "title": "Éclore Sous la Lune", "subtitle": "Des sacs à main conçus pour la femme qui porte sa propre lumière.", "cta": "Découvrir la Collection", "ctaSecondary": "Voir les Best-Sellers" },
+    "sections": {
+      "featured": "Collection Vedette", "featuredSub": "Des pièces choisies pour leur luxe discret",
+      "bestsellers": "Best-Sellers", "bestsellersSub": "Adorés encore et encore",
+      "newArrivals": "Nouveautés", "newArrivalsSub": "Fraîchement sorties de l'atelier",
+      "story": "Notre Histoire", "storyText": "Moon Blossom est né d'une conviction simple : un sac à main doit être une extension de qui vous êtes — élégant, discrètement confiant, et fait pour durer. Chaque pièce est conçue au Maroc, inspirée par la douce lueur du clair de lune et la floraison sans peur des femmes qui les portent.",
+      "why": "Pourquoi Choisir Moon Blossom", "reviews": "Ce Que Disent Nos Clientes", "reviewsSub": "De vrais mots de vraies femmes",
+      "instagram": "Suivez @moonblossom.ma", "newsletter": "Rejoignez le Cercle Privé", "newsletterSub": "Soyez la première informée des nouveautés et ventes privées.", "newsletterPlaceholder": "Votre adresse e-mail", "newsletterBtn": "S'abonner"
+    },
+    "why": {
+      "f1t": "Matériaux Premium", "f1d": "Cuir pleine fleur et quincaillerie dorée finie à la main sur chaque pièce.",
+      "f2t": "Paiement à la Livraison", "f2d": "Payez seulement à la réception de votre commande, partout au Maroc.",
+      "f3t": "Livraison Rapide", "f3d": "2 à 5 jours ouvrables dans toutes les grandes villes marocaines.",
+      "f4t": "Retours Faciles", "f4d": "14 jours pour changer d'avis, sans questions posées."
+    },
+    "product": { "addToCart": "Ajouter au Panier", "buyNow": "Acheter Maintenant", "quantity": "Quantité", "color": "Couleur", "description": "Description", "specifications": "Caractéristiques", "related": "Vous Aimerez Aussi", "reviews": "avis", "inStock": "En Stock", "sku": "Référence", "share": "Partager", "wishlist": "Ajouter aux Favoris" },
+    "shop": { "title": "Tous les Sacs", "filterBy": "Filtrer", "allCategories": "Toutes les Catégories", "priceRange": "Fourchette de Prix", "sortBy": "Trier par", "sortNewest": "Plus Récents", "sortPriceLow": "Prix Croissant", "sortPriceHigh": "Prix Décroissant", "sortPopular": "Plus Populaires", "noResults": "Aucun sac ne correspond à vos filtres.", "resetFilters": "Réinitialiser", "results": "résultats" },
+    "cart": { "title": "Votre Panier", "empty": "Votre panier est vide.", "emptySub": "Découvrez notre collection et trouvez votre nouveau favori.", "continueShopping": "Continuer mes Achats", "subtotal": "Sous-total", "shipping": "Livraison", "free": "Gratuite", "total": "Total", "checkout": "Passer à la Caisse", "remove": "Retirer", "each": "l'unité" },
+    "checkout": { "title": "Commande", "contactInfo": "Informations de Contact", "fullName": "Nom Complet", "phone": "Numéro de Téléphone", "city": "Ville", "address": "Adresse Complète", "addressPlaceholder": "Rue, immeuble, appartement, point de repère...", "notes": "Notes de Commande (optionnel)", "orderSummary": "Résumé de la Commande", "paymentMethod": "Mode de Paiement", "cod": "Paiement à la Livraison", "codDesc": "Payez en espèces à la réception de votre commande.", "placeOrder": "Confirmer via WhatsApp", "required": "Ce champ est requis", "invalidPhone": "Veuillez entrer un numéro valide" },
+    "footer": { "shop": "Boutique", "help": "Aide", "company": "Entreprise", "legal": "Légal", "privacy": "Politique de Confidentialité", "returns": "Retours & Remboursements", "shipping": "Politique de Livraison", "rights": "Tous droits réservés.", "madeIn": "Conçu avec amour au Maroc" },
+    "badges": { "new": "Nouveau", "sale": "Promo", "bestseller": "Best-Seller" },
+    "notFound": { "title": "404", "subtitle": "Cette page s'est perdue dans la nuit.", "text": "La page que vous recherchez n'existe pas ou a été déplacée.", "cta": "Retour à l'Accueil" },
+    "misc": { "off": "RÉDUCTION", "from": "Dès", "loading": "Chargement...", "close": "Fermer", "menu": "Menu", "language": "Langue" }
+  },
+  "ar": {
+    "dir": "rtl",
+    "nav": { "home": "الرئيسية", "shop": "المتجر", "categories": "الفئات", "about": "من نحن", "contact": "اتصل بنا", "faq": "الأسئلة الشائعة", "cart": "السلة", "search": "ابحثي عن حقيبة..." },
+    "hero": { "eyebrow": "تشكيلة الموسم الجديد", "title": "ازدهري تحت ضوء القمر", "subtitle": "حقائب يد صُممت للمرأة التي تحمل نورها الخاص.", "cta": "اكتشفي التشكيلة", "ctaSecondary": "تسوقي الأكثر مبيعاً" },
+    "sections": {
+      "featured": "التشكيلة المميزة", "featuredSub": "قطع مختارة بعناية لفخامتها الهادئة",
+      "bestsellers": "الأكثر مبيعاً", "bestsellersSub": "المفضلة دائماً لدى عميلاتنا",
+      "newArrivals": "وصل حديثاً", "newArrivalsSub": "أحدث إبداعات الأتيليه",
+      "story": "قصتنا", "storyText": "وُلدت Moon Blossom من إيمان بسيط: الحقيبة يجب أن تكون امتداداً لشخصيتك — أنيقة، واثقة بهدوء، وصُنعت لتدوم. كل قطعة مصممة في المغرب، مستوحاة من توهج ضوء القمر الناعم وازدهار المرأة الجريئة التي ترتديها.",
+      "why": "لماذا تختارين Moon Blossom", "reviews": "آراء عميلاتنا", "reviewsSub": "كلمات صادقة من نساء حقيقيات",
+      "instagram": "تابعينا @moonblossom.ma", "newsletter": "انضمي إلى دائرتنا المقربة", "newsletterSub": "كوني أول من يعلم بالتشكيلات الجديدة والعروض الخاصة.", "newsletterPlaceholder": "بريدك الإلكتروني", "newsletterBtn": "اشتركي"
+    },
+    "why": {
+      "f1t": "خامات فاخرة", "f1d": "جلد طبيعي فاخر وتفاصيل ذهبية مُشغّلة يدوياً في كل قطعة.",
+      "f2t": "الدفع عند الاستلام", "f2d": "ادفعي فقط عند وصول طلبك إلى باب منزلك، في جميع أنحاء المغرب.",
+      "f3t": "توصيل سريع", "f3d": "من 2 إلى 5 أيام عمل إلى جميع المدن المغربية الرئيسية.",
+      "f4t": "إرجاع سهل", "f4d": "14 يوماً لإرجاع المنتج دون أي أسئلة."
+    },
+    "product": { "addToCart": "أضيفي إلى السلة", "buyNow": "اشتري الآن", "quantity": "الكمية", "color": "اللون", "description": "الوصف", "specifications": "المواصفات", "related": "قد يعجبك أيضاً", "reviews": "تقييم", "inStock": "متوفر", "sku": "رمز المنتج", "share": "مشاركة", "wishlist": "أضيفي للمفضلة" },
+    "shop": { "title": "تسوقي كل الحقائب", "filterBy": "تصفية", "allCategories": "كل الفئات", "priceRange": "نطاق السعر", "sortBy": "ترتيب حسب", "sortNewest": "الأحدث", "sortPriceLow": "السعر: من الأقل", "sortPriceHigh": "السعر: من الأعلى", "sortPopular": "الأكثر شعبية", "noResults": "لا توجد حقائب مطابقة لبحثك.", "resetFilters": "إعادة ضبط", "results": "نتيجة" },
+    "cart": { "title": "سلة التسوق", "empty": "سلتك فارغة.", "emptySub": "اكتشفي تشكيلتنا واعثري على قطعتك المفضلة الجديدة.", "continueShopping": "مواصلة التسوق", "subtotal": "المجموع الفرعي", "shipping": "التوصيل", "free": "مجاني", "total": "المجموع الكلي", "checkout": "إتمام الطلب", "remove": "إزالة", "each": "للقطعة" },
+    "checkout": { "title": "إتمام الطلب", "contactInfo": "معلومات التواصل", "fullName": "الاسم الكامل", "phone": "رقم الهاتف", "city": "المدينة", "address": "العنوان الكامل", "addressPlaceholder": "الشارع، العمارة، الشقة، أقرب معلم...", "notes": "ملاحظات الطلب (اختياري)", "orderSummary": "ملخص الطلب", "paymentMethod": "طريقة الدفع", "cod": "الدفع عند الاستلام", "codDesc": "ادفعي نقداً عند استلام طلبك في عنوانك.", "placeOrder": "تأكيد الطلب عبر واتساب", "required": "هذا الحقل مطلوب", "invalidPhone": "يرجى إدخال رقم هاتف صحيح" },
+    "footer": { "shop": "المتجر", "help": "المساعدة", "company": "الشركة", "legal": "قانوني", "privacy": "سياسة الخصوصية", "returns": "سياسة الإرجاع والاسترجاع", "shipping": "سياسة الشحن", "rights": "جميع الحقوق محفوظة.", "madeIn": "صُمم بحب في المغرب" },
+    "badges": { "new": "جديد", "sale": "تخفيض", "bestseller": "الأكثر مبيعاً" },
+    "notFound": { "title": "404", "subtitle": "هذه الصفحة تاهت في الليل.", "text": "الصفحة التي تبحثين عنها غير موجودة أو تم نقلها.", "cta": "العودة للرئيسية" },
+    "misc": { "off": "خصم", "from": "ابتداءً من", "loading": "جاري التحميل...", "close": "إغلاق", "menu": "القائمة", "language": "اللغة" }
+  }
+}
