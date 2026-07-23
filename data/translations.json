@@ -12,10 +12,10 @@
       "instagram": "Follow @moonblossom.ma", "newsletter": "Join the Inner Circle", "newsletterSub": "Be first to know about new drops and private sales.", "newsletterPlaceholder": "Your email address", "newsletterBtn": "Subscribe"
     },
     "why": {
-      "f1t": "Premium Materials", "f1d": "Full-grain leather and hand-finished gold hardware in every piece.",
+    
       "f2t": "Cash on Delivery", "f2d": "Pay only when your order arrives at your door, anywhere in Morocco.",
-      "f3t": "Fast Delivery", "f3d": "2–5 business days across all major Moroccan cities.",
-      "f4t": "Easy Returns", "f4d": "14-day return window, no questions asked."
+      "f3t": "Fast Delivery", "f3d": "24-hour delivery in most cities. Delivery to remote areas may take longer.",
+      
     },
     "product": { "addToCart": "Add to Cart", "buyNow": "Buy Now", "quantity": "Quantity", "color": "Color", "description": "Description", "specifications": "Specifications", "related": "You May Also Like", "reviews": "reviews", "inStock": "In Stock", "sku": "SKU", "share": "Share", "wishlist": "Add to Wishlist" },
     "shop": { "title": "Shop All Bags", "filterBy": "Filter", "allCategories": "All Categories", "priceRange": "Price Range", "sortBy": "Sort by", "sortNewest": "Newest", "sortPriceLow": "Price: Low to High", "sortPriceHigh": "Price: High to Low", "sortPopular": "Most Popular", "noResults": "No bags match your filters.", "resetFilters": "Reset Filters", "results": "results" },
@@ -66,7 +66,7 @@
       "instagram": "تابعينا @moonblossom.ma", "newsletter": "انضمي إلى دائرتنا المقربة", "newsletterSub": "كوني أول من يعلم بالتشكيلات الجديدة والعروض الخاصة.", "newsletterPlaceholder": "بريدك الإلكتروني", "newsletterBtn": "اشتركي"
     },
     "why": {
-      "f1t": "خامات فاخرة", "f1d": "جلد طبيعي فاخر وتفاصيل ذهبية مُشغّلة يدوياً في كل قطعة.",
+    
       "f2t": "الدفع عند الاستلام", "f2d": "ادفعي فقط عند وصول طلبك إلى باب منزلك، في جميع أنحاء المغرب.",
       "f3t": "توصيل سريع", "f3d": "من 2 إلى 5 أيام عمل إلى جميع المدن المغربية الرئيسية.",
       "f4t": "إرجاع سهل", "f4d": "14 يوماً لإرجاع المنتج دون أي أسئلة."
