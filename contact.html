@@ -26,10 +26,6 @@
       <div class="contact-layout">
         <div>
           <div class="contact-info-card reveal">
-            <div id="cPin"></div>
-            <div><h4 data-i18n="nav.contact">Address</h4><p id="cAddress"></p></div>
-          </div>
-          <div class="contact-info-card reveal">
             <div id="cPhone"></div>
             <div><h4 data-i18n="checkout.phone">Phone</h4><a id="cPhoneVal" href="#"></a></div>
           </div>
@@ -70,11 +66,9 @@
 <script src="js/products.js"></script>
 <script>
 MB.init('contact').then(() => {
-  document.getElementById('cPin').innerHTML = MB.svgIcon('pin');
   document.getElementById('cPhone').innerHTML = MB.svgIcon('phone');
   document.getElementById('cMail').innerHTML = MB.svgIcon('mail');
   document.getElementById('cClock').innerHTML = MB.svgIcon('clock');
-  document.getElementById('cAddress').textContent = MB.fieldT(MB.state.store.contact.address);
   document.getElementById('cPhoneVal').textContent = MB.state.store.contact.phoneDisplay;
   document.getElementById('cPhoneVal').href = 'tel:+' + MB.state.store.whatsappNumber;
   document.getElementById('cEmailVal').textContent = MB.state.store.contact.email;
