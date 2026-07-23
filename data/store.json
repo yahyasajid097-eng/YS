@@ -29,6 +29,6 @@
     "El Jadida", "Béni Mellal", "Khouribga", "Settat", "Larache",
     "Mohammédia", "Safi", "Essaouira", "Ifrane", "Autre"
   ],
-  "shippingFee": 35,
-  "freeShippingThreshold": 899
+  "shippingFee": null,
+  "freeShippingThreshold": null
 }
