@@ -33,22 +33,40 @@
 <script>
 const CONTENT = {
   en: { updated: 'Last updated: July 2026', sections: [
-    ['Returns & Exchanges', 'If you\'d like to return or exchange an item, simply message us on WhatsApp with your order details and the reason for the return. We\'ll arrange the details directly with you — including pickup and any refund or exchange — as quickly as possible.'],
-    ['Refunds', 'Since all orders are paid via Cash on Delivery, any agreed refund is arranged directly with you over WhatsApp, in the way that works best for you.'],
-    ['Damaged or Incorrect Items', 'If you receive a damaged or incorrect item, message us on WhatsApp with photos as soon as possible, and we will arrange a replacement or refund with you directly.'],
-    ['Questions', 'Any question about returns or exchanges — just reach out to us on WhatsApp any time, we\'re happy to help.']
+    ['14-Day Return Window', 'You may return any item within 14 days of delivery for a full refund or exchange, provided it is unused, unworn, and in its original packaging with all tags attached.'],
+    ['How to Request a Return', 'Contact us via WhatsApp or the Contact page with your order details and reason for return. Our team will confirm the pickup or drop-off arrangement within 24 hours.', [
+      'Items must be free of stains, odors, or signs of wear.',
+      'Original dust bag and packaging must be included.',
+      'Proof of purchase (order confirmation) is required.'
+    ]],
+    ['Refunds', 'Since all orders are paid via Cash on Delivery, approved refunds are issued as store credit or bank transfer, based on your preference, within 5–7 business days of us receiving the returned item.'],
+    ['Exchanges', 'Prefer a different color or style? We\'re happy to arrange an exchange, subject to availability, once the original item is received and inspected.'],
+    ['Non-Returnable Items', 'Items marked as final sale, or bags showing clear signs of use, cannot be returned or refunded.'],
+    ['Damaged or Incorrect Items', 'If you receive a damaged or incorrect item, contact us within 48 hours of delivery with photos, and we will arrange a free replacement or full refund.']
   ]},
   fr: { updated: 'Dernière mise à jour : juillet 2026', sections: [
-    ['Retours et Échanges', 'Pour retourner ou échanger un article, il vous suffit de nous écrire sur WhatsApp avec les détails de votre commande et la raison du retour. Nous organiserons les détails directement avec vous — y compris la collecte et tout remboursement ou échange — aussi rapidement que possible.'],
-    ['Remboursements', 'Puisque toutes les commandes sont payées à la livraison, tout remboursement convenu est organisé directement avec vous sur WhatsApp, selon ce qui vous convient le mieux.'],
-    ['Articles Endommagés ou Incorrects', 'Si vous recevez un article endommagé ou incorrect, écrivez-nous sur WhatsApp avec des photos dès que possible, et nous organiserons un remplacement ou un remboursement directement avec vous.'],
-    ['Questions', 'Pour toute question sur les retours ou échanges, contactez-nous à tout moment sur WhatsApp, nous serons ravis de vous aider.']
+    ['Délai de Retour de 14 Jours', 'Vous pouvez retourner tout article dans les 14 jours suivant la livraison pour un remboursement complet ou un échange, à condition qu\'il soit inutilisé, non porté et dans son emballage d\'origine avec toutes les étiquettes.'],
+    ['Comment Demander un Retour', 'Contactez-nous via WhatsApp ou la page Contact avec les détails de votre commande et la raison du retour. Notre équipe confirmera l\'organisation de la collecte sous 24 heures.', [
+      'Les articles doivent être exempts de taches, d\'odeurs ou de signes d\'usure.',
+      'Le sac à poussière et l\'emballage d\'origine doivent être inclus.',
+      'Une preuve d\'achat est requise.'
+    ]],
+    ['Remboursements', 'Puisque toutes les commandes sont payées à la livraison, les remboursements approuvés sont émis sous forme de crédit boutique ou de virement bancaire, selon votre préférence, dans les 5 à 7 jours ouvrables suivant la réception de l\'article retourné.'],
+    ['Échanges', 'Vous préférez une autre couleur ou un autre modèle ? Nous organisons volontiers un échange, selon disponibilité, une fois l\'article d\'origine reçu et inspecté.'],
+    ['Articles Non Retournables', 'Les articles marqués comme vente finale, ou les sacs montrant des signes clairs d\'utilisation, ne peuvent pas être retournés ou remboursés.'],
+    ['Articles Endommagés ou Incorrects', 'Si vous recevez un article endommagé ou incorrect, contactez-nous dans les 48 heures suivant la livraison avec des photos, et nous organiserons un remplacement gratuit ou un remboursement complet.']
   ]},
   ar: { updated: 'آخر تحديث: يوليو 2026', sections: [
-    ['الإرجاع والاستبدال', 'إذا رغبتِ بإرجاع أو استبدال منتج، يكفي أن تراسلينا عبر واتساب مع تفاصيل طلبك وسبب الإرجاع. سنتفق معك مباشرة على كل التفاصيل — بما فيها الاستلام وأي استرداد أو استبدال — بأسرع وقت ممكن.'],
-    ['استرداد الأموال', 'نظراً لأن جميع الطلبات تُدفع عند الاستلام، يتم الاتفاق على أي استرداد معك مباشرة عبر واتساب، بالطريقة التي تناسبك.'],
-    ['المنتجات التالفة أو الخاطئة', 'إذا استلمتِ منتجاً تالفاً أو غير مطابق للطلب، راسلينا عبر واتساب مع صور بأسرع وقت ممكن، وسنتفق معك مباشرة على الاستبدال أو استرداد المبلغ.'],
-    ['أي استفسار', 'لأي سؤال حول الإرجاع أو الاستبدال، تواصلي معنا في أي وقت عبر واتساب، يسعدنا مساعدتك.']
+    ['مدة الإرجاع 14 يوماً', 'يمكنك إرجاع أي منتج خلال 14 يوماً من تاريخ التوصيل مقابل استرداد كامل للمبلغ أو الاستبدال، بشرط أن يكون غير مستخدم وفي عبوته الأصلية مع جميع البطاقات.'],
+    ['كيفية طلب الإرجاع', 'تواصلي معنا عبر واتساب أو صفحة اتصل بنا مع تفاصيل طلبك وسبب الإرجاع. سيؤكد فريقنا ترتيب الاستلام خلال 24 ساعة.', [
+      'يجب أن تكون المنتجات خالية من البقع أو الروائح أو علامات الاستخدام.',
+      'يجب إرفاق كيس الحماية والتغليف الأصليين.',
+      'يلزم تقديم إثبات الشراء.'
+    ]],
+    ['استرداد الأموال', 'نظراً لأن جميع الطلبات تُدفع عند الاستلام، تُصرف المبالغ المستردة المعتمدة كرصيد في المتجر أو تحويل بنكي حسب رغبتك، خلال 5 إلى 7 أيام عمل من استلامنا للمنتج المرتجع.'],
+    ['الاستبدال', 'تفضلين لوناً أو موديلاً مختلفاً؟ يسعدنا ترتيب عملية الاستبدال حسب التوفر، بعد استلام المنتج الأصلي وفحصه.'],
+    ['المنتجات غير القابلة للإرجاع', 'المنتجات المصنفة كتخفيضات نهائية، أو الحقائب التي تظهر عليها علامات استخدام واضحة، لا يمكن إرجاعها أو استرداد قيمتها.'],
+    ['المنتجات التالفة أو الخاطئة', 'إذا استلمتِ منتجاً تالفاً أو غير مطابق للطلب، تواصلي معنا خلال 48 ساعة من التوصيل مع صور، وسنقوم بترتيب استبدال مجاني أو استرداد كامل للمبلغ.']
   ]}
 };
 
