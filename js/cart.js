@@ -143,7 +143,7 @@ const MBCart = (() => {
     el.innerHTML = items.map(item => {
       const p = catalog.products.find(pr => pr.id === item.id);
       if(!p) return '';
-      return `<div class="checkout-summary-item"><span>${MB.fieldT(p.name)} × ${item.qty}</span><span>${MB.formatPrice(item.price*item.qty)}</span></div>`;
+      return `<div class="checkout-summary-item"><div class="checkout-summary-media">${MB.productMedia(p, item.color)}</div><span class="checkout-summary-name">${MB.fieldT(p.name)} × ${item.qty}</span><span>${MB.formatPrice(item.price*item.qty)}</span></div>`;
     }).join('');
     renderSummary();
 
