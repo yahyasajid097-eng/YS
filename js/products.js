@@ -200,6 +200,9 @@ const MBProducts = (() => {
     document.getElementById('pdpCategory').textContent = MB.fieldT(getCategoryName(p.category));
     document.getElementById('pdpName').textContent = MB.fieldT(p.name);
     document.getElementById('pdpDesc').textContent = MB.fieldT(p.description);
+    document.getElementById('pdpRatingVal').textContent = p.rating;
+    document.getElementById('pdpReviewCount').textContent = `(${p.reviewCount} ${MB.t('product.reviews')})`;
+    document.getElementById('pdpStars').textContent = '★★★★★'.slice(0, Math.round(p.rating)) + '☆☆☆☆☆'.slice(0, 5-Math.round(p.rating));
     document.getElementById('pdpSku').textContent = `${MB.t('product.sku')}: ${p.id.toUpperCase()}`;
 
     renderGallery();
